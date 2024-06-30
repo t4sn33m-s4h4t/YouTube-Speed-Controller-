@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Tasneem Speed Controller",
+    "version": "1.0",
+    "description": "Change YouTube video playback speed with keyboard shortcuts and on-screen buttons. Use (Shift + x) to speed up and (Shift + z) to slow down playback",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+  
