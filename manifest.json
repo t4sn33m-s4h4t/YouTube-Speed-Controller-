@@ -4,8 +4,10 @@
     "version": "1.0",
     "description": "Change YouTube video playback speed with keyboard shortcuts and on-screen buttons. Use (Shift + x) to speed up and (Shift + z) to slow down playback",
     "permissions": [
-      "activeTab"
-    ],
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
     "content_scripts": [
       {
         "matches": ["*://www.youtube.com/*"],

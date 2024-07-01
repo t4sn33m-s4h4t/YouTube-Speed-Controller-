@@ -4,6 +4,13 @@ function setPlaybackSpeed(speed) {
   const video = document.querySelector("video");
   if (video) {
     video.playbackRate = Math.max(0.25, Math.min(speed, 10));
+    
+    
+    let playbackRateObj = {
+      data: speed.toString(), 
+      creation: Date.now() 
+  };
+  sessionStorage.setItem('yt-player-playback-rate', JSON.stringify(playbackRateObj));
     updateSpeedDisplay();
   }
   
@@ -12,7 +19,9 @@ function setPlaybackSpeed(speed) {
 // Change speed by increment
 function changeSpeed(increment) {
   const video = document.querySelector("video");
-  if (video) setPlaybackSpeed(video.playbackRate + increment);
+  if (video) {
+    setPlaybackSpeed(video.playbackRate + increment)
+  };
 }
 
 // Update speed display
@@ -43,6 +52,10 @@ function createControlLink(text, iconClass, onClick, id) {
 
 // Add control links to YouTube player
 function addControlLinks() {
+  if (sessionStorage.getItem('yt-player-playback-rate')) {
+    
+    setPlaybackSpeed(Number(JSON.parse(sessionStorage.getItem('yt-player-playback-rate')).data))
+  }
   const controlsContainer = document.querySelector(".ytp-left-controls");
   if (!controlsContainer) return;
 
