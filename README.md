@@ -14,7 +14,7 @@
 <h3>Installation Steps</h3>
     <ol>
         <li>Install Tasneem Speed Controller directly:
-            <a href="https://github.com/t4sn33m-s4h4t/YouTube-Speed-Controller-/raw/main/Tasneem%20Speed%20Controller.zip" download>Install Tasneem Speed Controller</a>
+            <a href="https://github.com/t4sn33m-s4h4t/YouTube-Speed-Controller-/raw/main/Tasneem-speed-controller.zip" download>Install Tasneem Speed Controller</a>
         </li>
 
   <li> Navigate to chrome://extensions/.</li>
