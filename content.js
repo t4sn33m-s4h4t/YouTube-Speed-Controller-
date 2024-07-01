@@ -21,6 +21,7 @@ function changeSpeed(increment) {
   const video = document.querySelector("video");
   if (video) {
     setPlaybackSpeed(video.playbackRate + increment)
+    showSpeedMessage()
   };
 }
 
@@ -52,12 +53,16 @@ function createControlLink(text, iconClass, onClick, id) {
 
 // Add control links to YouTube player
 function addControlLinks() {
+
+
   if (sessionStorage.getItem('yt-player-playback-rate')) {
     
     setPlaybackSpeed(Number(JSON.parse(sessionStorage.getItem('yt-player-playback-rate')).data))
   }
   const controlsContainer = document.querySelector(".ytp-left-controls");
   if (!controlsContainer) return;
+
+  
 
   const controlWrapper = document.createElement("div");
   controlWrapper.style.display = "flex";
@@ -100,7 +105,58 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function showSpeedMessage() {
+  const showSpeedWrapper = document.querySelector(".showSpeedWrapper");
+  const showSpeedText = document.querySelector(".showSpeedText");
+
+  const video = document.querySelector("video");
+  showSpeedText.innerText = video.playbackRate.toString() +"x";
+  if (showSpeedWrapper) {
+    showSpeedWrapper.style.display = "block";
+    setTimeout(() => {
+      showSpeedWrapper.style.display = "none";
+    }, 450); 
+  } 
+}
+
+
+function CreateSpeedMessage() {
+  const videoPlayer = document.querySelector(".html5-video-player");
+if (videoPlayer) {
+  const speedContainer = document.createElement("div");
+  const showSpeedWrapper = document.createElement("div");
+  showSpeedWrapper.classList.add("showSpeedWrapper");
+  const showSpeedText = document.createElement("div");
+  showSpeedText.classList.add("showSpeedText");
+  // Set the styles for showSpeedText
+  showSpeedText.style.display = "inline-block";
+  showSpeedText.style.padding = "10px 20px";
+  showSpeedText.style.fontSize = "175%";
+  showSpeedText.style.background = "rgba(0, 0, 0, .5)";
+  showSpeedText.style.pointerEvents = "none";
+  showSpeedText.style.borderRadius = "3px";
+  // Set the styles for showSpeedWrapper
+  showSpeedWrapper.style.textAlign = "center";
+  showSpeedWrapper.style.position = "absolute";
+  showSpeedWrapper.style.left = "0";
+  showSpeedWrapper.style.right = "0";
+  showSpeedWrapper.style.top = "10%";
+  showSpeedWrapper.style.zIndex = 19;
+  showSpeedWrapper.style.display = "none"
+
+  showSpeedWrapper.appendChild(showSpeedText);
+  speedContainer.appendChild(showSpeedWrapper);
+  videoPlayer.appendChild(speedContainer);
+
+}
+
+}
+function start() {
+  CreateSpeedMessage()
+  addControlLinks()
+}
 // Add control links when window is loaded
 window.addEventListener("load", () => {
-  setTimeout(addControlLinks, 1000);
+  setTimeout(start, 1000);
 });
+
