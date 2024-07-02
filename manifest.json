@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Tasneem Speed Controller",
+    "name": "YT Time Saver",
     "version": "1.0",
-    "description": "Change YouTube video playback speed with keyboard shortcuts and on-screen buttons. Use (Shift + x) to speed up and (Shift + z) to slow down playback",
+    "description": "YT Time Saver is a browser extension that allows you to control YouTube video playback speed using keyboard shortcuts and on-screen buttons. Additionally, it provides automatic ad skipping and speed adjustment during unskippable ads for a seamless viewing experience.",
     "permissions": [
     "storage",
     "activeTab",
