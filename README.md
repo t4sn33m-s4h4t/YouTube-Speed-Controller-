@@ -1,7 +1,7 @@
 <h1>YT Time Saver</h1>
 
 <h2>Overview</h2>
-<p>YT Time Saver is a browser extension that allows you to control YouTube video playback speed using keyboard shortcuts and on-screen buttons. Additionally, it provides automatic ad skipping and speed adjustment during unskippable ads for a seamless viewing experience.</p>
+<p>YT Time Saver is a browser extension that allows you to control YouTube video playback speed using keyboard shortcuts and on-screen buttons. Additionally, it provides automatic ad skipping and speed adjustment during unskippable ads for a seamless viewing experience.Shortcuts also work in facebook and in some other sites</p>
 
 <h3>Features</h3>
 <ul>
