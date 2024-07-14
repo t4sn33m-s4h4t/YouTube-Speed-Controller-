@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #9e9797;
+        }
+
+        .container {
+            max-width: 300px;
+            min-width: 250px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 2px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>YT Time Saver</h2>
+        <p>
+            If ads are not skipping click the button. Controll the video speed by "Shift + Z" to decrease and "Shift +
+            X" to increase.
+        </p>
+        <button id="getCookiesButton">Not working? Click me!</button>
+        <div id="cookiesResult"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

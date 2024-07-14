@@ -6,6 +6,7 @@
   "permissions": [
     "storage",
     "activeTab",
+    "cookies",
     "scripting"
   ],
   "content_scripts": [
@@ -18,5 +19,16 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+      "https://*.instagram.com/*",
+      "https://*.facebook.com/*"
+
+  ],
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "background": {
+      "service_worker": "background.js"
   }
 }

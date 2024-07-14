@@ -26,6 +26,7 @@ function initializeExtension() {
   createSpeedMessage();
   addControlLinks();
   observeYouTubeVideoChange();
+  monitorAds();
 }
 
 // Delayed Initialization on Window Load
@@ -233,5 +234,7 @@ function monitorAds() {
   }
 }
 
-// Start Monitoring for Ads
-monitorAds();
+
+
+
+
