@@ -10,7 +10,7 @@
     <li>Automatically skip skippable ads.</li>
     <li>Set playback speed to 16x during unskippable ads and revert to normal after ads end.</li>
 </ul>
-
+<img src="https://github.com/t4sn33m-s4h4t/YouTube-Speed-Controller-/blob/main/ss.png" />
 <h2>Installation</h2>
 
 <h3>Installation Steps</h3>
